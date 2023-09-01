@@ -349,8 +349,8 @@ img {
     font-family: var(--fonte1);
 }
 
-.planta,
-.perfil {
+.planta1,
+.perfil1 {
     border-radius: 10px;
     background-color: var(--branco);
     display: flex;
@@ -359,12 +359,12 @@ img {
     height: 90%;
 }
 
-.option_img {
+.option_img1 {
     width: 40%;
     height: 70%;
 }
 
-.option_img img {
+.option_img1 img {
     width: 90%;
 }
 
@@ -375,14 +375,14 @@ img {
     justify-content: flex-start;
 }
 
-.planta_img,
-.perfil_img {
+.planta_img1,
+.perfil_img1 {
     display: flex;
     width: 86%;
 }
 
-.planta_img img,
-.perfil_img img {
+.planta_img1 img,
+.perfil_img1 img {
 
     width: 45%;
 }

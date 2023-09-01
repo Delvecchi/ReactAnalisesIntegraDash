@@ -7,6 +7,7 @@ import MenuLateral from './components/MenuLateral'
 
 import './index.css'
 import { Analises } from './pages/Analises/analises'
+import Favoritos from './pages/Favoritos'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
@@ -14,11 +15,9 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
     <MenuLateral />
       <section className='body'>
         <Header />
-        
-      
-
       <Routes>
         <Route path='analises' element={<Analises />} />
+        <Route path='favoritos' element={<Favoritos />}/>
       </Routes>
       </section>
     </BrowserRouter>

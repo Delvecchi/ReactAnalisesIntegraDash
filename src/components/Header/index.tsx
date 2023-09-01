@@ -1,15 +1,31 @@
 import Lupa from "../../assets/img/icone-lupa-principal.png"
-import alertHome from "../../assets/img/icone-alert-home.png"
+import alertHome from "../../assets/img/alertheader.svg"
 import Foto from "../../assets/img/img-user.png"
 import Perfil from "../../assets/img/icone-btn-user-info.png"
+import Down from "../../assets/img/down.svg"
+import LogoVolks from "../../assets/img/icons8-volkswagen-100.png"
+import Favorite from "../../assets/img/heartheader.svg"
 import "./style.css"
 
 function Header() {
     return (
         <>
             <div className="inicio-lateral">
-                <div className="lupa-alert">
-                    <div className="lupa">
+                <section className="posicionamentoesquerda">
+                    <div className="planta">
+                        <div className="option_img">
+                            <img src={Down} alt="" />
+                        </div>
+                        <div className="planta_img">
+                            <img src={LogoVolks} alt="" />
+                        </div>
+                        <div className="posicionamento_planta">
+                            <p>Panta de Taubaté </p>
+                        </div>
+
+                    </div>
+                    {/* <div className="lupa-alert"> */}
+                    {/* <div className="lupa">
                         <input className="lupa-input-centro" type="search"/>
                             <button className="btn-lupa-principal">
                                 <img 
@@ -18,28 +34,47 @@ function Header() {
                                 alt="Icone de Lupa na Seção Principal"
                                 />
                             </button>
-                    </div>
+                    </div> */}
                     <button className="alert">
-                        <img 
-                        src={alertHome} 
-                        alt="Icone de Alerta da Tela Principal"
+                        <img
+                            src={Favorite}
+                            alt="Icone de Alerta da Tela Principal"
                         />
                     </button>
-                </div>
+                    <button className="alert">
+                        <img
+                            src={alertHome}
+                            alt="Icone de Alerta da Tela Principal"
+                        />
+                    </button>
+                    {/* </div> */}
+                </section>
+
                 <div className="usuario">
-                    <img 
-                    className="foto-user" 
-                src={Foto} 
-                    alt="Foto do Usuário"
+                        <div className="option_img">
+                            <img src={Down} alt="" />
+                        </div>
+                        <div className="usuario_img">
+                            <img src={Foto} alt="" />
+                        </div>
+                        <div className="posicionamento_foto">
+                            <p>Nome do usuario</p>
+                        </div>
+
+                    </div>
+
+                {/* <div className="">
+                <div className="option_img">
+                            <img src={Down} alt="" />
+                        </div>
+                    <img
+                        className="foto-user"
+                        src={Foto}
+                        alt="Foto do Usuário"
                     />
-                        <span>Nome do Usuário</span>
-                        <a href="#">
-                            <img 
-                            src={Perfil} 
-                            alt="btn-user-info"
-                            />
-                        </a>
-                </div>
+                    <span>Nome do Usuário</span>
+                    
+                </div> */}
             </div>
         </>
     )

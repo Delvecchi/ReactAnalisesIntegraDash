@@ -292,6 +292,7 @@ aside:hover {
         height: 36px;
         background-color: var(--azulC);
         border: none;
+        text-decoration: none;
     }
 
     .i-home {

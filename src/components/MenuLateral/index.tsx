@@ -9,6 +9,7 @@ import Sair from "../../assets/img/icone-sair.png"
 import Lupa from "../../assets/img/icone-lupa.png"
 
 import "./style.css"
+import { Link } from "react-router-dom"
 
 function MenuLateral() {
     return (
@@ -30,13 +31,13 @@ function MenuLateral() {
                                         alt="Icone de Casinha"
                                     />
                                 </button>
-                                <button className="btn-menu analises">
+                                <Link to="/analises" className="btn-menu analises">
                                     <img
                                         className="i-analises"
                                         src={Analises}
                                         alt="Icone de Análises"
                                     />
-                                </button>
+                                </Link>
                                 <button className="btn-menu cavalo">
                                     <img
                                         className="i-cavalo"
@@ -44,13 +45,13 @@ function MenuLateral() {
                                         alt="Icone de Cavalo"
                                     />
                                 </button>
-                                <button className="btn-menu coracao">
+                                <Link to="/favoritos" className="btn-menu coracao">
                                     <img
                                         className="i-coracao"
                                         src={Favoritos}
                                         alt="Icone de Coração"
                                     />
-                                </button>
+                                </Link>
                                 <button className="btn-menu alertas">
                                     <img
                                         className="i-alertas"
@@ -123,14 +124,14 @@ function MenuLateral() {
                                 />
                                 Visão Geral
                             </button>
-                            <button className="btn-menu analises">
+                            <Link to="/analises" className="btn-menu analises">
                                 <img
                                     className="i-analises" 
                                     src={Analises}
                                     alt="Icone de Análises"
                                 />
                                 Análises
-                            </button>
+                            </Link>
                             <button className="btn-menu cavalo">
                                 <img
                                     className="i-cavalo"
@@ -139,14 +140,14 @@ function MenuLateral() {
                                 />
                                 Estratégia
                             </button>
-                            <button className="btn-menu coracao">
+                            <Link to="/favoritos" className="btn-menu coracao">
                                 <img
                                     className="i-coracao"
                                     src={Favoritos}
                                     alt="Icone de Coração"
                                 />
                                 Favoritos
-                            </button>
+                            </Link>
                             <button className="btn-menu alertas">
                                 <img
                                     className="i-alertas"
@@ -175,7 +176,7 @@ function MenuLateral() {
                             </button>
                         </div>
                         <div className="p-menu s s2">
-                            <label for="mudar-estado">White Mode</label>
+                            <label htmlFor="mudar-estado">White Mode</label>
                             <input
                                 className="barra"
                                 type="range"

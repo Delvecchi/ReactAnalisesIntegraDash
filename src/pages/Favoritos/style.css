@@ -27,21 +27,28 @@ main {
 
 .primeira_secao_menu_esquerdo {
     display: flex;
-    height: 85vh;
+    height: 82vh;
 }
 
 /* .corpo_do_site_meio {
     display: flex;
 }    */
 
+a {
+    display: flex;
+    width: 100%;
+    justify-content: flex-start;
+    align-items: center; 
+}
 .edicao_fav_meio_pag {
     font-weight: 700;
-    margin-top: 81px;
+    color: black;
     font-size: 25PX;
 }
 
 .edicao_itens_salvos_meio_pag {
     margin-top: 25px;
+    color: black;
     font-size: 20px;
 }
 

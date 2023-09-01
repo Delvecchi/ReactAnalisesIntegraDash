@@ -291,6 +291,7 @@ aside:hover {
         width: 164px;
         height: 36px;
         background-color: var(--azulC);
+        color: white;
         border: none;
         text-decoration: none;
     }

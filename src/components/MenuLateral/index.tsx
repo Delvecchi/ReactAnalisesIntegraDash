@@ -1,195 +1,129 @@
-import Logo from "../../assets/img/Logo Branco D - IntegraDash.png"
-import Home from "../../assets/img/icone-home.png"
-import Analises from "../../assets/img/icone-analises.png"
-import Estrategia from "../../assets/img/icone-cavalo.png"
-import Favoritos from "../../assets/img/icone-favoritos.png"
-import Alertas from "../../assets/img/icone-alertas.png"
-import Configuracoes from "../../assets/img/icone-config.png"
-import Sair from "../../assets/img/icone-sair.png"
-import Lupa from "../../assets/img/icone-lupa.png"
+import Logo from "../../assets/img/fundo_escuro_logo_integradash.png"
+import HomeAzul from "../../assets/img/iconHomeBlue.svg"
+import HomeBranco from "../../assets/img/branco_home_icone.png"
+import AnalisesAzul from "../../assets/img/iconAnalisesBlue.svg"
+import AnalisesBranco from "../../assets/img/branco_ analise_icone.png"
+import EstrategiaAzul from "../../assets/img/iconEstratégiaBlue.svg"
+import EstrategiaBranco from "../../assets/img/branco_estrategia_icone.png"
+import FavoritosAzul from "../../assets/img/iconFavoritosBlue.svg"
+import FavoritosBranco from "../../assets/img/branco_favoritos_icone.png"
+import AlertasAzul from "../../assets/img/iconAlertasBlue.svg"
+import AlertasBranco from "../../assets/img/branco_alerta_icone.png"
+import ConfiguracoesAzul from "../../assets/img/iconConfiguracoesBlue.svg"
+import ConfiguracoesBranco from "../../assets/img/branco_configuracao_icone.png"
+import SairAzul from "../../assets/img/iconSairBlue.svg"
+import SairBranco from "../../assets/img/branco_sair_icone.png"
 
 import "./style.css"
-import { Link } from "react-router-dom"
+// import { Link } from "react-router-dom"
 
-function MenuLateral() {
+export default function MenuLateral() {
+
+    const list: NodeListOf<Element> = document.querySelectorAll('.list');
+    function activeLink(this: Element) {
+        list.forEach((item: Element) =>
+            item.classList.remove('active'));
+        this.classList.add('active');
+    }
+    list.forEach((item: Element) =>
+        item.addEventListener('onClick', activeLink));
+
+    // const list = document.querySelectorAll('.list');
+    //     function activeLink() {
+    //         list.forEach((item) =>
+    //             item.classList.remove('active'));
+    //         this.classList.add('active');
+    //     }
+    //     list.forEach((item) =>
+    //         item.addEventListener('click', activeLink));
+
     return (
-        <>
-            <aside>
-                <section className="menu-fechado">
-                    <div className="posicionamento_menu-fechado">
-                        <img
-                            className="logo"
-                            src={Logo}
-                            alt="Logo - IntegraDash"
-                        />
-                        <div className="posicionamento_menupaginas">
-                            <div className="p-menu">
-                                <button className="btn-menu home">
-                                    <img
-                                        className="i-home"
-                                        src={Home}
-                                        alt="Icone de Casinha"
-                                    />
-                                </button>
-                                <Link to="/analises" className="btn-menu analises">
-                                    <img
-                                        className="i-analises"
-                                        src={Analises}
-                                        alt="Icone de Análises"
-                                    />
-                                </Link>
-                                <button className="btn-menu cavalo">
-                                    <img
-                                        className="i-cavalo"
-                                        src={Estrategia}
-                                        alt="Icone de Cavalo"
-                                    />
-                                </button>
-                                <Link to="/favoritos" className="btn-menu coracao">
-                                    <img
-                                        className="i-coracao"
-                                        src={Favoritos}
-                                        alt="Icone de Coração"
-                                    />
-                                </Link>
-                                <button className="btn-menu alertas">
-                                    <img
-                                        className="i-alertas"
-                                        src={Alertas}
-                                        alt="Icone de Alertas"
-                                    />
-                                </button>                       
-                        </div>
-                        <div className="p-menu s">
-                                    <button className="btn-menu config">
-                                        <img
-                                            className="i-config"
-                                            src={Configuracoes}
-                                            alt="Icone de Configurações"
-                                        />
-                                    </button>
-                                    <button className="btn-menu sair">
-                                        <img
-                                            className="i-sair"
-                                            src={Sair}
-                                            alt="Icone de Sair"
-                                        />
-                                    </button>
-                                </div>
-                            </div>
-                    </div>
-                    {/* <div className="direita">
-                        <div className="posicionamento_favoritos">
-                            <span>Análises</span>
-                            <div className="favoritos">
-                                <span>Favoritos</span>
-                                <div className="copas">
-                                    <img
-                                        className="heart"
-                                        src={Favoritos}
-                                        alt="Logo - IntegraDash"
-                                    />
-                                    <span>Taubaté</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div> */}
+        <aside className="navigation">
+            <img src={Logo} className="logo" alt="" />
+            <ul className="barra_navegacao">
+                <section className="navegacao_peginas">
+                    <li className="list active">
+                        <a href="#">
+                            <span className="icon">
+                                <img src={HomeAzul} alt="" />
+                            </span>
+                            <span className="icon1">
+                                <img src={HomeBranco} alt="" />
+                            </span>
+                            <span className="title ">Home</span>
+                        </a>
+                    </li>
+                    <li className="list ">
+                        <a href="#">
+                            <span className="icon">
+                                <img src={AnalisesAzul} alt="" />
+                            </span>
+                            <span className="icon1">
+                                <img src={AnalisesBranco} alt="" />
+                            </span>
+                            <span className="title">Analises</span>
+                        </a>
+                    </li>
+                    <li className="list">
+                        <a href="#">
+                            <span className="icon">
+                                <img src={EstrategiaAzul} alt="" />
+                            </span>
+                            <span className="icon1">
+                                <img src={EstrategiaBranco} alt="" />
+                            </span>
+                            <span className="title">Estratégias</span>
+                        </a>
+                    </li>
+                    <li className="list">
+                        <a href="#">
+                            <span className="icon">
+                                <img src={FavoritosAzul} alt="" />
+                            </span>
+                            <span className="icon1">
+                                <img src={FavoritosBranco} alt="" />
+                            </span>
+                            <span className="title">Favoritos</span>
+                        </a>
+                    </li>
+                    <li className="list">
+                        <a href="#">
+                            <span className="icon">
+                                <img src={AlertasAzul} alt="" />
+                            </span>
+                            <span className="icon1">
+                                <img src={AlertasBranco} alt="" />
+                            </span>
+                            <span className="title">Alertas</span>
+                        </a>
+                    </li>
                 </section>
+                <section className="configuracoes_sair">
+                    <li className="list">
+                        <a href="#">
+                            <span className="icon">
+                                <img src={ConfiguracoesAzul} alt="" />
+                            </span>
+                            <span className="icon1">
+                                <img src={ConfiguracoesBranco} alt="" />
+                            </span>
+                            <span className="title">Configurações</span>
+                        </a>
+                    </li>
+                    <li className="list">
+                        <a href="#">
+                            <span className="icon">
+                                <img src={SairAzul} alt="" />
+                            </span>
+                            <span className="icon1">
+                                <img src={SairBranco} alt="" />
+                            </span>
+                            <span className="title">Sair</span>
+                        </a>
+                    </li>
+                </section>
+            </ul>
+        </aside>
 
-                <section className="menu-aberto">
-                    <div className="posicionamento_logo">
-                        <img
-                            className="logo"
-                            src={Logo}
-                            alt="Logo - IntegraDash"
-                        />
-                    </div>
-                    <div className="posicionamento_menupaginaseaberto">
-                        <div className="p-menu">
-                            <div className="lupa">
-                                <input type="search" />
-                                <button>
-                                    <img
-                                        className="icone-lupa"
-                                        src={Lupa}
-                                        alt="Icone de Lupa"
-                                    />
-                                </button>
-                            </div>
-                            <button className="btn-menu home">
-                                <img
-                                    className="i-home"
-                                    src={Home}
-                                    alt="Icone de Casinha"
-                                />
-                                Visão Geral
-                            </button>
-                            <Link to="/analises" className="btn-menu analises">
-                                <img
-                                    className="i-analises" 
-                                    src={Analises}
-                                    alt="Icone de Análises"
-                                />
-                                Análises
-                            </Link>
-                            <button className="btn-menu cavalo">
-                                <img
-                                    className="i-cavalo"
-                                    src={Estrategia}
-                                    alt="Icone de Cavalo"
-                                />
-                                Estratégia
-                            </button>
-                            <Link to="/favoritos" className="btn-menu coracao">
-                                <img
-                                    className="i-coracao"
-                                    src={Favoritos}
-                                    alt="Icone de Coração"
-                                />
-                                Favoritos
-                            </Link>
-                            <button className="btn-menu alertas">
-                                <img
-                                    className="i-alertas"
-                                    src={Alertas}
-                                    alt="Icone de Alertas"
-                                />
-                                Alertas
-                            </button>
-                        </div>
-                        <div className="p-menu s">
-                            <button className="btn-menu config">
-                                <img
-                                    className="i-config"
-                                    src={Configuracoes}
-                                    alt="Icone de Configurações"
-                                />
-                                Configurações
-                            </button>
-                            <button className="btn-menu sair">
-                                <img
-                                    className="i-sair"
-                                    src={Sair}
-                                    alt="Icone de Sair"
-                                />
-                                Sair
-                            </button>
-                        </div>
-                        <div className="p-menu s s2">
-                            <label htmlFor="mudar-estado">White Mode</label>
-                            <input
-                                className="barra"
-                                type="range"
-                                min="0"
-                                max="1"
-                                name="mudar-estado"
-                                id="mudar-estado"
-                            />
-                        </div>
-                    </div>
-                </section>
-            </aside>
-        </>
     )
 }
-export default MenuLateral;

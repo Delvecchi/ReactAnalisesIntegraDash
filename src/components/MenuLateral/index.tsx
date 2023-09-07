@@ -15,35 +15,20 @@ import SairAzul from "../../assets/img/iconSairBlue.svg"
 import SairBranco from "../../assets/img/branco_sair_icone.png"
 
 import "./style.css"
+
+import { Link } from "react-router-dom"
+import { Analises } from "../../pages/Analises"
 // import { Link } from "react-router-dom"
 
 export default function MenuLateral() {
 
-    const list: NodeListOf<Element> = document.querySelectorAll('.list');
-    function activeLink(this: Element) {
-        list.forEach((item: Element) =>
-            item.classList.remove('active'));
-        this.classList.add('active');
-    }
-    list.forEach((item: Element) =>
-        item.addEventListener('onClick', activeLink));
-
-    // const list = document.querySelectorAll('.list');
-    //     function activeLink() {
-    //         list.forEach((item) =>
-    //             item.classList.remove('active'));
-    //         this.classList.add('active');
-    //     }
-    //     list.forEach((item) =>
-    //         item.addEventListener('click', activeLink));
-
     return (
         <aside className="navigation">
-            <img src={Logo} className="logo" alt="" />
+            <img src={Logo} className="logo_menu" alt="" />
             <ul className="barra_navegacao">
                 <section className="navegacao_peginas">
                     <li className="list active">
-                        <a href="#">
+                        <Link to={"#"}>
                             <span className="icon">
                                 <img src={HomeAzul} alt="" />
                             </span>
@@ -51,10 +36,10 @@ export default function MenuLateral() {
                                 <img src={HomeBranco} alt="" />
                             </span>
                             <span className="title ">Home</span>
-                        </a>
+                        </Link>
                     </li>
                     <li className="list ">
-                        <a href="#">
+                        <Link to="Analises">
                             <span className="icon">
                                 <img src={AnalisesAzul} alt="" />
                             </span>
@@ -62,10 +47,10 @@ export default function MenuLateral() {
                                 <img src={AnalisesBranco} alt="" />
                             </span>
                             <span className="title">Analises</span>
-                        </a>
+                        </Link>
                     </li>
                     <li className="list">
-                        <a href="#">
+                        <Link to="#">
                             <span className="icon">
                                 <img src={EstrategiaAzul} alt="" />
                             </span>
@@ -73,10 +58,10 @@ export default function MenuLateral() {
                                 <img src={EstrategiaBranco} alt="" />
                             </span>
                             <span className="title">Estratégias</span>
-                        </a>
+                        </Link>
                     </li>
                     <li className="list">
-                        <a href="#">
+                        <Link to="Favoritos">
                             <span className="icon">
                                 <img src={FavoritosAzul} alt="" />
                             </span>
@@ -84,10 +69,10 @@ export default function MenuLateral() {
                                 <img src={FavoritosBranco} alt="" />
                             </span>
                             <span className="title">Favoritos</span>
-                        </a>
+                        </Link>
                     </li>
                     <li className="list">
-                        <a href="#">
+                        <Link to="Alertas">
                             <span className="icon">
                                 <img src={AlertasAzul} alt="" />
                             </span>
@@ -95,12 +80,12 @@ export default function MenuLateral() {
                                 <img src={AlertasBranco} alt="" />
                             </span>
                             <span className="title">Alertas</span>
-                        </a>
+                        </Link>
                     </li>
                 </section>
                 <section className="configuracoes_sair">
                     <li className="list">
-                        <a href="#">
+                        <Link to="#">
                             <span className="icon">
                                 <img src={ConfiguracoesAzul} alt="" />
                             </span>
@@ -108,10 +93,10 @@ export default function MenuLateral() {
                                 <img src={ConfiguracoesBranco} alt="" />
                             </span>
                             <span className="title">Configurações</span>
-                        </a>
+                        </Link>
                     </li>
                     <li className="list">
-                        <a href="#">
+                        <Link to="#">
                             <span className="icon">
                                 <img src={SairAzul} alt="" />
                             </span>
@@ -119,7 +104,7 @@ export default function MenuLateral() {
                                 <img src={SairBranco} alt="" />
                             </span>
                             <span className="title">Sair</span>
-                        </a>
+                        </Link>
                     </li>
                 </section>
             </ul>

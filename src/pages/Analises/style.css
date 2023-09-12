@@ -19,70 +19,15 @@ body {
     font-size: 100%;
 }
 
-article {
-    width: 15%;
-    height: 100vh;
-    background-color: var(--azulprincipal);
+.main_analises {
     display: flex;
-    flex-direction: row;
-
-
+    width: 90%;
+    flex-direction: column;
 }
 
-article:hover {
-    width: 15%;
-    transition: 0.5s;
 
-    .menu_aberto {
-        display: flex;
-        justify-content: space-between;
-        flex-direction: column;
-        align-items: center;
-        width: 100vw;
-        height: 100vh;
-        font-family: var(--fonte1);
 
-    }
-
-    .logo_aberto img {
-        width: 20%;
-    }
-
-    .navegacao_aberto img,
-    .config_aberto img {
-        width: 20%;
-    }
-
-    .posicionamento_aberto {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        width: 85%;
-        height: 100%;
-    }
-
-    .menu_fechado {
-        display: none;
-    }
-
-}
-
-.logo {
-    height: 18%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.logo a {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    justify-content: center;
-}
-
-.logo img {
+/* .logo img {
     width: 55%;
 }
 
@@ -90,12 +35,12 @@ article:hover {
     width: 100%;
     height: 20%;
     display: flex;
-}
+} */
 
 
 
 .menu_aberto {
-    display: none;
+    display: block;
 }
 
 .menu_fechado {
@@ -396,7 +341,7 @@ img {
     width: 70%;
 }
 
-/* .up {
+ .up {
     width: 100%;
     height: 13%;
     display: flex;
@@ -489,8 +434,8 @@ label {
 }
 
 .posicionamento_opcao {
-    width: 90%;
-    height: 25%;
+    width: 100%;
+    height: 30%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -538,11 +483,10 @@ label {
 }
 
 .posicionamento_producao {
-
     display: flex;
-    justify-content: space-between;
-    width: 35%;
+    width: 50%;
     height: 100%;
+    justify-content: space-between;
 }
 
 .esquerdo {
@@ -575,11 +519,13 @@ label {
     justify-content: center;
 }
 
-.direito {
+.direito_analises {
+    border: 1px solid red;
     width: 49%;
     display: flex;
-    height: 100%;
+    height: 3%;
     justify-content: center;
+    align-items: center;
 }
 
 .producao,
@@ -608,7 +554,7 @@ label {
 }
 
 .posicionamento_informacoes {
-    width: 90%;
+    width: 100%;
     height: 56%;
     display: flex;
     justify-content: space-around;
@@ -627,12 +573,11 @@ label {
 }
 
 .posicionamento_carros {
-
     width: 30%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-end;
 }
 
 .posicionamento_demonstrativo {
@@ -667,6 +612,7 @@ label {
 .graf_img img {
     width: 100%;
     height: 100%;
+    border-radius: 10px;
 }
 
 .demonstrativo {

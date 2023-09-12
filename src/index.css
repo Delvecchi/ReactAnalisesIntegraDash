@@ -26,10 +26,11 @@ a:hover {
 
 .body {
   width: 95%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: scroll;
 }
 
 body {
@@ -42,11 +43,11 @@ body {
 
 #root {
   width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-start;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
 }
 
 /* h1 {

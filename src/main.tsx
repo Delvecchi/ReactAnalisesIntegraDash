@@ -12,6 +12,8 @@ import { Analises } from './pages/Analises'
 
 
 import Favoritos from './pages/Favoritos'
+import Login from './pages/Login'
+import Home from './pages/Home'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
@@ -23,6 +25,8 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
         <Route path='analises' element={<Analises />} />
         <Route path='favoritos' element={<Favoritos />}/>
         <Route path='alertas' element={<Alertas />}/>
+        <Route path='login' element={<Login/>}/>
+        <Route path='home' element={<Home />}/>
       </Routes>
       </section>
     </BrowserRouter>

@@ -28,7 +28,7 @@ export default function MenuLateral() {
             <ul className="barra_navegacao">
                 <section className="navegacao_peginas">
                     <li className="list active">
-                        <Link to={"#"}>
+                        <Link to="Home">
                             <span className="icon">
                                 <img src={HomeAzul} alt="" />
                             </span>
